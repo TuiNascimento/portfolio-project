@@ -1,0 +1,134 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding:0;
+}
+    #welcome-section{
+        height: 100%;
+        color: #fff;
+        background: linear-gradient(rgb(13, 21, 29), rgb(228, 54, 10));
+        background-size: 150% 150%;
+        display: flex;
+        flex-direction: column;
+        animation-name: backgroundAnimation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+        @keyframes backgroundAnimation{
+            0%{
+                background-position: 0 0;
+            }
+            50%{
+                background-position: 0% 50%;
+            }
+            100%{
+                background-position: 0 0;
+            }
+        }
+        .welcomeHeader{
+            margin: auto;
+            margin-top: 0%;
+            margin-bottom: 0%;
+            height: 20%;
+            
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            position:relative;
+
+            animation: fallHeader;
+            animation-duration: 1.5s;
+        }
+            .titleName, .subtitle{
+                font-family: 'Major Mono Display', monospace;
+                align-self: center;
+            }
+
+            @keyframes fallHeader{
+                0%{
+                    top: -50%;
+                    opacity:0;
+                }
+                50%{
+                    opacity:0.4;
+                }
+                100%{
+                    top:0;
+                    opacity:1;
+                }
+            }
+                
+        .divAvatar {
+            width: 40%;
+            height:30%;
+            margin:auto;
+        }
+            .divAvatar:hover{
+                border:2px solid black;
+            }
+        
+        .socialMedia{
+            width:70%;
+            height:11%;
+            margin:auto;
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            position: relative;
+            animation: socialMediaAnimation;
+            animation-duration: 2.5s;
+        }
+            @keyframes socialMediaAnimation{
+                0%{
+                    right:90%
+                }
+                100%{
+                    right: 0;
+                }
+            }
+            #linkedIn, #gitHub, #freeCodeCamp, #codepen, #instagram{
+                font-size: 15px;
+                border-radius: 50%;
+                height: 70px;
+                width:70px;
+                border: 2px solid black;
+                background-position: center;
+                background-repeat: no-repeat;
+                position:relative;
+            }
+            #linkedIn:hover, #gitHub:hover, #freeCodeCamp:hover, #codepen:hover, #instagram:hover{
+                border: 2px dashed black;
+            }
+                #linkedIn{
+                    background-image: url("images/linkedin.png");
+                    background-size: 45px;
+                }
+                #gitHub{
+                    background-image: url("images/github.png");
+                    background-size: 45px;
+                }
+                #codepen{
+                    background-image: url("images/codepen.svg");
+                    background-size: 50px;
+                }
+                #freeCodeCamp{
+                    background-image: url("images/free-code-camp-brands.svg");
+                    background-size: 50px;
+                }
+                #instagram{
+                    background-image: url("images/instagram.svg");
+                    background-size: 50px;
+                }
+        .license{
+            margin:auto;
+            margin-bottom: 5px;
+            color: black;
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+    #projects{
+        height: 100%;
+        background-color: purple;
+    }
