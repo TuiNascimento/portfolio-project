@@ -3,16 +3,23 @@ html, body{
     margin: 0;
     padding:0;
 }
+*{ 
+    scroll-behavior: smooth;
+ }
+
     #welcome-section{
         height: 100%;
         color: #fff;
-        background: linear-gradient(rgb(13, 21, 29), rgb(228, 54, 10));
+        background: linear-gradient(45deg, rgb(13, 21, 29), rgb(145, 80, 80));
         background-size: 150% 150%;
+
         display: flex;
         flex-direction: column;
+
         animation-name: backgroundAnimation;
         animation-duration: 10s;
         animation-iteration-count: infinite;
+        scroll-behavior: smooth;
     }
         @keyframes backgroundAnimation{
             0%{
@@ -22,14 +29,36 @@ html, body{
                 background-position: 0% 50%;
             }
             100%{
-                background-position: 0 0;
+                background-position: 0 0;}
             }
+        .navBar{
+            width:100%;
+            height:8%;
+            background-color: black;
+
+            margin:0;
         }
+            .navBar ul{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+            }
+                .navBar li{
+                    list-style: none;
+                    width:5%;
+                    margin-right: 5%;
+                }
+                    .navBar a{
+                        color:teal;
+                        text-decoration: none;
+                        margin:3%;
+                        font-size:15px;
+                    }
         .welcomeHeader{
             margin: auto;
             margin-top: 0%;
             margin-bottom: 0%;
-            height: 20%;
             
             display: flex;
             flex-direction: column;
@@ -42,6 +71,10 @@ html, body{
             .titleName, .subtitle{
                 font-family: 'Major Mono Display', monospace;
                 align-self: center;
+            }
+            .titleName{
+                font-size: 40px;
+                margin-top: 0;
             }
 
             @keyframes fallHeader{
@@ -56,19 +89,28 @@ html, body{
                     top:0;
                     opacity:1;
                 }
-            }
-                
+            }     
         .divAvatar {
-            width: 40%;
-            height:30%;
             margin:auto;
+            display: flex;
         }
-            .divAvatar:hover{
-                border:2px solid black;
+            .avatar{
+                width: 40%;
+                margin: auto;
+                animation: avatar;
+                animation-duration: 5s;
             }
+                @keyframes avatar{
+                    from{
+                        opacity:0;
+                    }
+                    to{
+                        opacity:1
+                    }
+                }
         
         .socialMedia{
-            width:70%;
+            width:60%;
             height:11%;
             margin:auto;
             display: inline-flex;
@@ -88,47 +130,90 @@ html, body{
                 }
             }
             #linkedIn, #gitHub, #freeCodeCamp, #codepen, #instagram{
-                font-size: 15px;
                 border-radius: 50%;
-                height: 70px;
-                width:70px;
+                height: 60px;
+                width:60px;
                 border: 2px solid black;
                 background-position: center;
                 background-repeat: no-repeat;
                 position:relative;
+            }
+            #linkedIn::before, #gitHub::before, #freeCodeCamp::before, #codepen::before,#instagram::before{
+                content: "";
+                position: absolute;
+                left:0;
+                background: white;
+                width: 100%;
+                height:100%;
+                z-index:0;
+                border-radius: 50%;
+                opacity:0.05;
             }
             #linkedIn:hover, #gitHub:hover, #freeCodeCamp:hover, #codepen:hover, #instagram:hover{
                 border: 2px dashed black;
             }
                 #linkedIn{
                     background-image: url("images/linkedin.png");
-                    background-size: 45px;
+                    background-size: 35px;
                 }
                 #gitHub{
                     background-image: url("images/github.png");
-                    background-size: 45px;
+                    background-size: 35px;
                 }
                 #codepen{
                     background-image: url("images/codepen.svg");
-                    background-size: 50px;
+                    background-size: 35px;
                 }
                 #freeCodeCamp{
                     background-image: url("images/free-code-camp-brands.svg");
-                    background-size: 50px;
+                    background-size: 40px;
                 }
                 #instagram{
                     background-image: url("images/instagram.svg");
-                    background-size: 50px;
+                    background-size: 40px;
                 }
-        .license{
-            margin:auto;
-            margin-bottom: 5px;
-            color: black;
-            font-family: monospace;
-            font-size: 15px;
-        }
+            #arrow{
+                background-image: url("images/arrow.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                
 
+                margin: auto;
+                margin-top: 0;
+                position: relative;
+
+                height: 20px;
+                width:30px;
+
+                animation: arrowDown;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate-reverse;
+            }
+                    @keyframes arrowDown{
+                        0%{
+                            top:0;
+                        }
+                        100%{
+                            top:2%;
+                        }
+                    }
     #projects{
         height: 100%;
-        background-color: purple;
+        position: relative;
+        bottom:20px;
+        background-color: lavender;
+        scroll-behavior: smooth;
     }
+    .license{
+        margin:auto;
+        margin-bottom: 5px;
+        color: black;
+        font-family: monospace;
+        font-size: 15px;
+    }
+@media (min-width:1000px){
+    .avatar {
+        width:40%
+    }
+}
