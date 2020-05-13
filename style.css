@@ -119,7 +119,6 @@ html, body{
         
         .socialMedia{
             width:60%;
-            height:11%;
             margin:auto;
             display: inline-flex;
             flex-direction: row;
@@ -145,10 +144,11 @@ html, body{
                 background-position: center;
                 background-repeat: no-repeat;
                 position: relative;
+                margin: 2%;
             }
             #linkedIn::before, #gitHub::before, #profile-link::before, #codepen::before,#instagram::before{
                 content: "";
-                position: absolute;
+                display: block;
                 left:0;
                 background: white;
                 width: 100%;
@@ -185,6 +185,7 @@ html, body{
                 background-position: center;
                 background-repeat: no-repeat;
                 
+                margin-top:5%;
                 margin: auto;
                 position: relative;
 
