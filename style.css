@@ -8,18 +8,20 @@ html, body{
  }
 
     #welcome-section{
-        height: 100%;
+        height: 92%;
         color: #fff;
-        background: linear-gradient(45deg, rgb(13, 21, 29), rgb(145, 80, 80));
-        background-size: 150% 150%;
+        background-color: #000;
+        background-image: linear-gradient(-135deg, rgb(20, 20, 20), rgba(70, 61, 61, 0.993));
+        background-size: 100% 100%;
 
         display: flex;
         flex-direction: column;
-
+        /*
         animation-name: backgroundAnimation;
         animation-duration: 10s;
         animation-iteration-count: infinite;
         scroll-behavior: smooth;
+        */
     }
         @keyframes backgroundAnimation{
             0%{
@@ -37,23 +39,29 @@ html, body{
             background-color: black;
 
             margin:0;
+            position: sticky;
+            top:0;
+            opacity: 1;
+            z-index:2;
         }
             .navBar ul{
+                margin:0;
+                height: 100%;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
                 justify-content: flex-end;
+                align-items: center;
             }
                 .navBar li{
                     list-style: none;
-                    width:5%;
-                    margin-right: 5%;
+                    margin-right: 2%;
                 }
                     .navBar a{
-                        color:teal;
+                        color:white;
                         text-decoration: none;
-                        margin:3%;
                         font-size:15px;
+                        font-family: 'Baloo Da 2', cursive;
                     }
         .welcomeHeader{
             margin: auto;
@@ -129,27 +137,27 @@ html, body{
                     right: 0;
                 }
             }
-            #linkedIn, #gitHub, #freeCodeCamp, #codepen, #instagram{
+            #linkedIn, #gitHub, #profile-link, #codepen, #instagram{
                 border-radius: 50%;
                 height: 60px;
                 width:60px;
                 border: 2px solid black;
                 background-position: center;
                 background-repeat: no-repeat;
-                position:relative;
+                position: relative;
             }
-            #linkedIn::before, #gitHub::before, #freeCodeCamp::before, #codepen::before,#instagram::before{
+            #linkedIn::before, #gitHub::before, #profile-link::before, #codepen::before,#instagram::before{
                 content: "";
                 position: absolute;
                 left:0;
                 background: white;
                 width: 100%;
                 height:100%;
-                z-index:0;
+
                 border-radius: 50%;
                 opacity:0.05;
             }
-            #linkedIn:hover, #gitHub:hover, #freeCodeCamp:hover, #codepen:hover, #instagram:hover{
+            #linkedIn:hover, #gitHub:hover, #profile-link:hover, #codepen:hover, #instagram:hover{
                 border: 2px dashed black;
             }
                 #linkedIn{
@@ -164,7 +172,7 @@ html, body{
                     background-image: url("images/codepen.svg");
                     background-size: 35px;
                 }
-                #freeCodeCamp{
+                #profile-link{
                     background-image: url("images/free-code-camp-brands.svg");
                     background-size: 40px;
                 }
@@ -177,13 +185,11 @@ html, body{
                 background-position: center;
                 background-repeat: no-repeat;
                 
-
                 margin: auto;
-                margin-top: 0;
                 position: relative;
 
                 height: 20px;
-                width:30px;
+                width:40px;
 
                 animation: arrowDown;
                 animation-duration: 2s;
