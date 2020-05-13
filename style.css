@@ -225,4 +225,13 @@ html, body{
 @media(max-width:600px){
     .titleName{font-size: 20px;}
     .subtitle{font-size: 15px;}
+    #linkedIn, #gitHub, #profile-link, #codepen, #instagram{
+        width:45px;
+        height:45px;
+        background-size:32px;
+    }
+    .socialMedia{
+        margin:auto;
+        margin-top:0;
+    }
 }
