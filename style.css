@@ -6,7 +6,35 @@ html, body{
 *{ 
     scroll-behavior: smooth;
  }
+ .navBar{
+    width:100%;
+    height:8%;
+    background-color: black;
 
+    margin:0;
+    position: sticky;
+    top:0;
+    z-index:2;
+}
+    .navBar ul{
+        margin:0;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+        .navBar li{
+            list-style: none;
+            margin-right: 2%;
+        }
+            .navBar a{
+                color:white;
+                text-decoration: none;
+                font-size:15px;
+                font-family: 'Baloo Da 2', cursive;
+            }
     #welcome-section{
         height: 92%;
         color: #fff;
@@ -33,36 +61,7 @@ html, body{
             100%{
                 background-position: 0 0;}
             }
-        .navBar{
-            width:100%;
-            height:8%;
-            background-color: black;
 
-            margin:0;
-            position: sticky;
-            top:0;
-            opacity: 1;
-            z-index:2;
-        }
-            .navBar ul{
-                margin:0;
-                height: 100%;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                justify-content: flex-end;
-                align-items: center;
-            }
-                .navBar li{
-                    list-style: none;
-                    margin-right: 2%;
-                }
-                    .navBar a{
-                        color:white;
-                        text-decoration: none;
-                        font-size:15px;
-                        font-family: 'Baloo Da 2', cursive;
-                    }
         .welcomeHeader{
             margin: auto;
             margin-top: 0%;
@@ -104,6 +103,7 @@ html, body{
         }
             .avatar{
                 width: 40%;
+                height: auto;
                 margin: auto;
                 animation: avatar;
                 animation-duration: 5s;
@@ -119,6 +119,7 @@ html, body{
         
         .socialMedia{
             width:60%;
+
             margin:auto;
             display: inline-flex;
             flex-direction: row;
@@ -127,6 +128,7 @@ html, body{
             position: relative;
             animation: socialMediaAnimation;
             animation-duration: 2.5s;
+            margin-bottom: 0%;
         }
             @keyframes socialMediaAnimation{
                 0%{
@@ -138,8 +140,9 @@ html, body{
             }
             #linkedIn, #gitHub, #profile-link, #codepen, #instagram{
                 border-radius: 50%;
+                width: 60px;
                 height: 60px;
-                width:60px;
+                
                 border: 2px solid black;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -185,7 +188,7 @@ html, body{
                 background-position: center;
                 background-repeat: no-repeat;
                 
-                margin-top:5%;
+                margin-top:0%;
                 margin: auto;
                 position: relative;
 
@@ -219,8 +222,7 @@ html, body{
         font-family: monospace;
         font-size: 15px;
     }
-@media (min-width:1000px){
-    .avatar {
-        width:40%
-    }
+@media(max-width:600px){
+    .titleName{font-size: 20px;}
+    .subtitle{font-size: 15px;}
 }
